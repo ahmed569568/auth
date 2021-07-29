@@ -1,0 +1,9 @@
+.form-group{
+  width: 300px;
+}
+.form{
+  display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+

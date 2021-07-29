@@ -1,0 +1,9 @@
+.passForm{
+  position: relative;
+}
+.icon{
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+  top: 11px;
+}

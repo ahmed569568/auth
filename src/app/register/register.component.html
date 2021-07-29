@@ -1,0 +1,136 @@
+<form [formGroup]="registrationForm" (ngSubmit)="registerUser()" novalidate>
+  <!-- <div formGroupName="createProfileDto"> -->
+    <div class="card m-auto mt-5">
+      <div class="card-body bg-light">
+        <h5 class="card-title">Register</h5>
+        <div class="form">
+          <div class="mb-3 form-group">
+            <label for="email" class="form-label">Email </label>
+            <input type="email" class="form-control" email formControlName="email" name="email" placeholder="email"
+              [ngClass]="{'is-invalid' : submitted && f.email.errors}" required>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">
+                this email is required
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <label for="firstname" class="form-label">firstname</label>
+            <div class="passForm">
+              <input type="firstname" class="form-control" firstname formControlName="firstname" name="firstname"
+                placeholder="first name" [ngClass]="{'is-invalid' : submitted && f.firstname.errors}" required>
+              <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                <div *ngIf="f.firstname.errors.required">
+                  this first name is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="mb-3 form-group">
+            <label for="lastname" class="form-label">lastname</label>
+            <div class="passForm">
+              <input type="lastname" class="form-control" lastname formControlName="lastname" name="lastname"
+                placeholder="last name" [ngClass]="{'is-invalid' : submitted && f.lastname.errors}" required>
+              <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                <div *ngIf="f.lastname.errors.required">
+                  this last name is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <label for="gender" class="form-label">gender</label>
+            <div class="passForm">
+              <input type="gender" class="form-control" gender formControlName="gender" name="gender"
+                placeholder="gender" [ngClass]="{'is-invalid' : submitted && f.gender.errors}" required>
+              <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                <div *ngIf="f.gender.errors.required">
+                  this gender is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="mb-3 form-group">
+            <label for="age" class="form-label">age</label>
+            <div class="passForm">
+              <input type="text" class="form-control" age formControlName="age" name="age" placeholder="age"
+                [ngClass]="{'is-invalid' : submitted && f.age.errors}" required>
+              <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+                <div *ngIf="f.age.errors.required">
+                  this age is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <label for="country" class="form-label">country</label>
+            <div class="passForm">
+              <input type="country" class="form-control" country formControlName="country" name="country"
+                placeholder="country" [ngClass]="{'is-invalid' : submitted && f.country.errors}" required>
+              <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                <div *ngIf="f.country.errors.required">
+                  this country is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="mb-3 form-group">
+            <label for="city" class="form-label">city</label>
+            <div class="passForm">
+              <input type="city" class="form-control" city formControlName="city" name="city" placeholder="city"
+                [ngClass]="{'is-invalid' : submitted && f.city.errors}" required>
+              <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                <div *ngIf="f.city.errors.required">
+                  this city is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <label for="address" class="form-label">address</label>
+            <div class="passForm">
+              <input type="address" class="form-control" address formControlName="address" name="address"
+                placeholder="address" [ngClass]="{'is-invalid' : submitted && f.address.errors}" required>
+              <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                <div *ngIf="f.address.errors.required">
+                  this address is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 form-group">
+          <button class="btn btn-success" type="submit" [disabled]="!registrationForm.valid">Register</button>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <!-- <div formGroupName="createProfileDto">
+    <div class="mb-3 form-group">
+      <label for="email" class="form-label">Email </label>
+      <input type="email" class="form-control" email formControlName="email" name="email" placeholder="email"
+        [ngClass]="{'is-invalid' : submitted && f.email.errors}" required>
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">
+          this email is required
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="password" class="form-label">password </label>
+      <input type="password" class="form-control" password formControlName="password" name="password"
+        placeholder="password" [ngClass]="{'is-invalid' : submitted && f.password.errors}" required>
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">
+          this password is required
+        </div>
+      </div>
+    </div>
+  </div> -->
+</form>
