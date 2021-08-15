@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.createFormBuilder();
+    // this.createFormBuilder();
   }
   registerUser() {
     console.log(this.registrationForm.value);
@@ -30,46 +30,46 @@ export class RegisterComponent implements OnInit {
     // //   password: this.registrationForm.value.password
 
     // }
-    this.submitted = true;
-    if (this.registrationForm.invalid) {
-      return;
-    }
-    this._auth.registerUser(this.registrationForm.value).subscribe(res => {
-      console.log(res);
+    // this.submitted = true;
+    // if (this.registrationForm.invalid) {
+    //   return;
+    // }
+    // this._auth.registerUser(this.registrationForm.value).subscribe(res => {
+    //   console.log(res);
 
     //   this._auth.loginUser(userCredentials).subscribe(res => {
     //     console.log(res);
 
     //   })
-    }, error => {
-      console.log(error);
+  //   }, error => {
+  //     console.log(error);
 
-    })
-  }
+  //   })
+  // }
 
-  createFormBuilder() {
-    this.registrationForm = this.fb.group({
+  // createFormBuilder() {
+  //   this.registrationForm = this.fb.group({
       // authCredentialDto: new FormGroup({
       //   email: new FormControl(null, Validators.required),
       //   password: new FormControl(null, Validators.required)
       // }),
       // createProfileDto: new FormGroup({
-        email: new FormControl(null, Validators.required),
-        firstname: new FormControl(null, Validators.required),
-        lastname: new FormControl(null, Validators.required),
-        gender: new FormControl(null, Validators.required),
-        age: new FormControl(null, Validators.required),
-        country: new FormControl(null, Validators.required),
-        city: new FormControl(null, Validators.required),
-        address: new FormControl(null, Validators.required),
-      })
-    // })
-  }
-  get f() { return this.registrationForm.controls }
-  get email() { return this.registrationForm.get('email'); }
+  //       email: new FormControl(null, Validators.required),
+  //       firstname: new FormControl(null, Validators.required),
+  //       lastname: new FormControl(null, Validators.required),
+  //       gender: new FormControl(null, Validators.required),
+  //       age: new FormControl(null, Validators.required),
+  //       country: new FormControl(null, Validators.required),
+  //       city: new FormControl(null, Validators.required),
+  //       address: new FormControl(null, Validators.required),
+  //     })
+  //   // })
+  // }
+  // get f() { return this.registrationForm.controls }
+  // get email() { return this.registrationForm.get('email'); }
 
 
 }
 
-
+}
 

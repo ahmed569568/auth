@@ -1,38 +1,37 @@
-
 <form [formGroup]="authCredentialDto" (ngSubmit)="loginUser()" novalidate>
   <div class="card m-auto mt-5" style="width: 18rem;">
     <div class="card-body bg-light">
       <h5 class="card-title">Login</h5>
       <div class="mb-3 form-group">
         <label for="email" class="form-label">Email </label>
-        <input type="email" class="form-control" email formControlName="email" name="email" placeholder="name@example.com" [ngClass]="{'is-invalid' : submitted && f.email.errors}" required>
+        <input type="email" class="form-control" email formControlName="email" name="email"
+          placeholder="name@example.com" [ngClass]="{'is-invalid' : submitted && f.email.errors}" required>
         <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
           <div *ngIf="f.email.errors.required">
-              this email is required
+            this email is required
           </div>
-      </div>
+        </div>
       </div>
       <div class="mb-3 form-group ">
         <label for="password" class="form-label">Password</label>
         <div class="passForm">
-          <input type="password" class="form-control" password formControlName="password"  name="password" placeholder="name@example.com" [type]="fieldTextType ? 'text' : 'password'" [ngClass]="{'is-invalid' : submitted && f.password.errors}" required >
+          <input type="password" class="form-control" password formControlName="password" name="password"
+            placeholder="name@example.com" [type]="fieldTextType ? 'text' : 'password'"
+            [ngClass]="{'is-invalid' : submitted && f.password.errors}" required>
           <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
             <div *ngIf="f.password.errors.required">
-                this password is required
+              this password is required
             </div>
-        </div>
-          <i
-        class="fa icon"
-        [ngClass]="{
+          </div>
+          <i class="fa icon" [ngClass]="{
           'fa-eye-slash': !fieldTextType,
           'fa-eye': fieldTextType
-        }"
-        (click)="toggleFieldTextType()"
-      ></i>
+        }" (click)="toggleFieldTextType()"></i>
         </div>
       </div>
       <div class="mb-3 form-group">
         <button class="btn btn-success" type="submit">Login</button>
+        <button class="btn text-primary" routerLink="/register" type="submit">Register</button>
       </div>
     </div>
   </div>

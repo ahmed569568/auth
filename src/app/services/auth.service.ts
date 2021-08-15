@@ -7,13 +7,15 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private _registerUrl = "http://localhost:8000/auth/register";
+  // private _registerUrl = "http://localhost:8000/auth/register";
   private _loginUrl = "http://localhost:8000/auth/login";
+  // private _registerUrl = "https://dev.api.vi.egdev.afaqy.co/auth/register";
+  // private _loginUrl = "https://dev.api.vi.egdev.afaqy.co/auth/login";
 
   constructor(private http: HttpClient, private _router: Router) { }
-  registerUser(user: any) {
-    return this.http.post<any>(this._registerUrl, user)
-  }
+  // registerUser(user: any) {
+  //   return this.http.post<any>(this._registerUrl, user)
+  // }
   loginUser(user: any) {
     return this.http.post<any>(this._loginUrl, user)
   }
